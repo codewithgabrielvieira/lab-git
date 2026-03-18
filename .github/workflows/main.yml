@@ -1,0 +1,20 @@
+name: Exemplo basico de Github Actions
+
+on: [push]
+
+jobs:
+  job_01:        
+    runs-on: ubuntu-latest
+    steps:
+      - name: Passo 1   
+        run: echo "Executando passo 1"
+      - name: Passo 2    
+        run: echo "Executando passo 2"
+
+  job_02:     
+    runs-on: ubuntu-latest
+    steps:
+      - name: Passo 1   
+        run: echo "Executando passo 1"
+      - name: Passo 2    
+        run: echo "Executando passo 2"
