@@ -33,3 +33,23 @@ Nesta fase, temos uma classe `Calculadora` que foi entregue sem nenhum teste uni
 ```bash
 # Executar a aplicação manualmente
 python main.py
+
+
+
+## 🔴 Etapa 01: A Denúncia do Erro (CI Fail)
+
+Nesta etapa, introduzimos a **Governança Automatizada**. O objetivo é demonstrar como um teste unitário bem escrito impede que um erro de lógica chegue ao usuário final.
+
+### 🛠️ O que foi adicionado:
+* **`test_main.py`**: Contém asserções que validam a regra de negócio (multiplicação).
+* **`.github/workflows/ci.yml`**: Define a esteira de CI que instala o Python e executa o motor de testes.
+
+### 📉 O que observar no GitHub:
+1. Vá na aba **Actions** do repositório.
+2. Você verá um workflow falhando (ícone X vermelho).
+3. Ao clicar no erro, você verá a mensagem: `AssertionError: assert 7 == 10`.
+
+**Status Atual:** O código está bloqueado para merge pois não atende aos requisitos de qualidade.
+
+---
+[Ver código do Teste](https://github.com/ceub-integracao-devops/simple-test-ci/blob/01-falha-logica/test_main.py) | [Ver Logs do Erro no Actions](https://github.com/ceub-integracao-devops/simple-test-ci/actions)
