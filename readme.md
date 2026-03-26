@@ -10,13 +10,13 @@ O objetivo é transformar um código instável e vulnerável em uma aplicação 
 
 Acompanhe a evolução do projeto através das branches abaixo. Cada etapa resolve um problema real de engenharia.
 
-| Etapa | Status | Descrição | Atalhos |
+| Etapa | Status | Descrição | Codigo | Actions |
 | :--- | :---: | :--- | :--- |
-| **00. Base** | ⚪ | Código inicial sem validações. | [Ver Código](https://github.com/ceub-integracao-devops/simple-test-ci/commit/230f3a9) |
-| **01. CI Fail** | 🔴 | Introdução de Testes e GitHub Actions (Falha). | [Diff Etapa 01](#) |
-| **02. CI Pass** | 🟢 | Correção da lógica e aprovação na esteira. | [Diff Etapa 02](#) |
-| **03. Security** | ⚠️ | Injeção de vulnerabilidade (Dependabot). | [Diff Etapa 03](#) |
-| **04. Final** | ✅ | Projeto consolidado e seguro. | [Diff Etapa 04](#) |
+| **00. Base** | ⚪ | Código inicial sem validações. | [Ver Código](https://github.com/ceub-integracao-devops/simple-test-ci/commit/230f3a9) | [ N/A]  |
+| **01. CI Fail** | 🔴 | Introdução de Testes e GitHub Actions (Falha). | [Diff Etapa 01]([#](https://github.com/ceub-integracao-devops/simple-test-ci/compare/01-falha-logica?expand=1)) |  [Actions Etapa 1]([#](https://github.com/ceub-integracao-devops/simple-test-ci/actions/runs/23573056104/job/68639633610 ) |  
+| **02. CI Pass** | 🟢 | Correção da lógica e aprovação na esteira. | [Diff Etapa 02](#) | [Actions Etapa 02](#) |
+| **03. Security** | ⚠️ | Injeção de vulnerabilidade (Dependabot). | [Diff Etapa 03](#) | [Actions Etapa 03](#) |
+| **04. Final** | ✅ | Projeto consolidado e seguro. | [Diff Etapa 04](#) | [Actions Etapa 04](#) |
 
 ---
 
@@ -33,3 +33,23 @@ Nesta fase, temos uma classe `Calculadora` que foi entregue sem nenhum teste uni
 ```bash
 # Executar a aplicação manualmente
 python main.py
+
+```
+
+## 🔴 Etapa 01: A Denúncia do Erro (CI Fail)
+
+Nesta etapa, introduzimos a **Governança Automatizada**. O objetivo é demonstrar como um teste unitário bem escrito impede que um erro de lógica chegue ao usuário final.
+
+### 🛠️ O que foi adicionado:
+* **`test_main.py`**: Contém asserções que validam a regra de negócio (multiplicação).
+* **`.github/workflows/ci.yml`**: Define a esteira de CI que instala o Python e executa o motor de testes.
+
+### 📉 O que observar no GitHub:
+1. Vá na aba **Actions** do repositório.
+2. Você verá um workflow falhando (ícone X vermelho).
+3. Ao clicar no erro, você verá a mensagem: `AssertionError: assert 7 == 10`.
+
+**Status Atual:** O código está bloqueado para merge pois não atende aos requisitos de qualidade.
+
+---
+[Ver código do Teste](https://github.com/ceub-integracao-devops/simple-test-ci/blob/01-falha-logica/test_main.py) | [Ver Logs do Erro no Actions](https://github.com/ceub-integracao-devops/simple-test-ci/actions)
