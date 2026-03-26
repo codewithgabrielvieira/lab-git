@@ -1,8 +1,8 @@
-# 🛡️ DevOps & Security | LogiTech
+# 🛡️ DevOps | LogiTech
 
-Este repositório é um ambiente controlado para o estudo de **Ciclo de Vida de Software (SDLC)**, focado em **Integração Contínua (CI)** e **Segurança de Dependências (SCA)**. 
+Este repositório é um ambiente controlado para o estudo de **Ciclo de Vida de Software (SDLC)**, focado em **Integração Contínua (CI)**. 
 
-O objetivo é transformar um código instável e vulnerável em uma aplicação protegida por testes automatizados e monitoramento de segurança.
+O objetivo é transformar um código instável e vulnerável em uma aplicação protegida por testes automatizados.
 
 ---
 
@@ -15,8 +15,6 @@ Acompanhe a evolução do projeto através das branches abaixo. Cada etapa resol
 | **00. Base** | ⚪ | Código inicial sem validações. | [Ver Commit](https://github.com/ceub-integracao-devops/simple-test-ci/commit/230f3a9) | N/A |
 | **01. CI Fail** | 🔴 | Introdução de Testes e GitHub Actions (Falha). | [Diff Etapa 01](https://github.com/ceub-integracao-devops/simple-test-ci/compare/main...01-falha-logica) | [Logs Falha](https://github.com/ceub-integracao-devops/simple-test-ci/actions/runs/23573210411/job/68640114167) |
 | **02. CI Pass** | 🟢 | Correção da lógica e aprovação na esteira. | [Diff Etapa 02](https://github.com/ceub-integracao-devops/simple-test-ci/pull/2/changes/4f84957cab4263415067e3aece85f9049b989437) | [Actions Etapa 02](https://github.com/ceub-integracao-devops/simple-test-ci/actions/runs/23574307704/job/68643379417) |
-| **03. Security** | ⚠️ | Injeção de vulnerabilidade (Dependabot). | [Diff Etapa 03](#) | [Actions Etapa 03](#) |
-| **04. Final** | ✅ | Projeto consolidado e seguro. | [Diff Etapa 04](#) | [Actions Etapa 04](#) |
 
 ---
 
